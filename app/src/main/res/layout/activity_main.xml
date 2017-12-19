@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="bwei.com.heyongwu20171211.view.MainActivity">
+
+    <TextView
+        android:layout_weight="9"
+        android:background="#5a98da"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="购物车" />
+    <android.support.percent.PercentRelativeLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <bwei.com.heyongwu20171211.widget.MyExpanableListView
+            android:id="@+id/mlv"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent = "100%"
+            app:layout_heightPercent = "80%"/>
+
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent = "100%"
+            app:layout_heightPercent = "20%">
+            <CheckBox
+                android:id="@+id/main_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/main_cb"
+                android:layout_toRightOf="@+id/main_cb"
+                android:text="全选"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_alignParentRight="true"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="90dp"
+                android:text="合计 ：" />
+
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:text="0"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:layout_marginRight="75dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/holo_red_light" />
+            <TextView
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_red_dark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="结算(0)"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>
